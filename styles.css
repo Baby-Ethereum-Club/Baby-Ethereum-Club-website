@@ -2085,6 +2085,14 @@ html {
     display: grid;
   }
   
+  .w-code-component > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
   :root {
     --midnight-blue: #000a43;
     --dark-midnight-blue: #00072e;
@@ -2152,7 +2160,7 @@ html {
     color: #fff;
     letter-spacing: 2px;
     cursor: default;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e07a1fc1c8be_dots-bg.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e07a1fc1c8be_dots-bg.png");
     background-position: 0 0;
     background-size: 17px;
     background-attachment: fixed;
@@ -2171,7 +2179,7 @@ html {
   
   .section.section-header {
     background-color: var(--dark-midnight-blue);
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e0be17c1c8c8_bg-header.jpg");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e0be17c1c8c8_bg-header.jpg");
     background-position: 50%;
     background-repeat: repeat-x;
     background-size: contain;
@@ -2300,7 +2308,7 @@ html {
   .nav-item {
     color: #fff;
     cursor: default;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e04c7cc1c8b1_hover-menu.svg");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e04c7cc1c8b1_hover-menu.svg");
     background-position: -130% 70%;
     background-repeat: no-repeat;
     background-size: 40px 3px;
@@ -2317,7 +2325,7 @@ html {
   
   .nav-item:hover {
     color: var(--blue-violet);
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e04c7cc1c8b1_hover-menu.svg");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e04c7cc1c8b1_hover-menu.svg");
     background-position: 50% 70%;
     background-size: 40px 3px;
   }
@@ -2430,7 +2438,7 @@ html {
   .right-column-header {
     z-index: 1;
     perspective: 1000px;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e029bec1c8b2_blur-header.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e029bec1c8b2_blur-header.png");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -2650,7 +2658,7 @@ html {
   .div-block {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e05b8ac1c8b3_eat.jpg");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e05b8ac1c8b3_eat.jpg");
     background-position: 50%;
     background-size: cover;
     border-radius: 8px;
@@ -2709,6 +2717,10 @@ html {
   .swiper.swiper-container {
     grid-column-gap: 16px;
     grid-row-gap: 16px;
+    aspect-ratio: auto;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    mix-blend-mode: normal;
     flex-direction: row;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
@@ -2718,6 +2730,7 @@ html {
     padding: 60px 10px;
     display: flex;
     position: static;
+    overflow: auto;
   }
   
   .swiper-wrapper {
@@ -2749,6 +2762,7 @@ html {
     height: 3px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
     position: absolute;
     top: 0%;
     bottom: auto;
@@ -2906,6 +2920,7 @@ html {
   
   .smooth-wrapper {
     position: relative;
+    overflow: auto;
   }
   
   .section-about {
@@ -3036,7 +3051,7 @@ html {
   }
   
   .column-rarity-image {
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e01cf9c1c8ba_blur-rarity.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e01cf9c1c8ba_blur-rarity.png");
     background-position: 50%;
     background-size: cover;
     justify-content: center;
@@ -3148,7 +3163,7 @@ html {
   .roadmap {
     float: none;
     text-align: left;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e03f2fc1c8c1_blur-roadmap.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/640c5e627c91e03f2fc1c8c1_blur-roadmap.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -3358,7 +3373,7 @@ html {
   }
   
   .accordion-wrapper {
-    cursor: none;
+    cursor: auto;
     flex-flow: column;
     display: flex;
   }
@@ -3366,10 +3381,11 @@ html {
   .accordion-item {
     outline-offset: 0px;
     text-align: center;
-    cursor: none;
+    cursor: auto;
     background-color: #4f128a;
     border-radius: 20px;
     outline: 3px #fff;
+    flex: 0 auto;
     width: 1000px;
     margin-bottom: 3px;
     padding: 10px 30px;
@@ -3690,7 +3706,7 @@ html {
   }
   
   .comparison-positive {
-    background-image: url("https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a700a12aad4_check%20circle.svg");
+    background-image: url("https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a700a12aad4_check%20circle.svg");
     background-position: 0%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -3841,7 +3857,7 @@ html {
   }
   
   .utility-page-wrap {
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/6628ca3b681e92ea0f478036_Designer%20(8).png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/6628ca3b681e92ea0f478036_Designer%20(8).png");
     background-position: 50%;
     background-size: cover;
     background-attachment: fixed;
@@ -4064,14 +4080,20 @@ html {
   }
   
   .image-4 {
+    box-sizing: border-box;
     opacity: .99;
+    mix-blend-mode: normal;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+    display: block;
+    overflow: auto;
   }
   
   .text-block-7 {
+    padding-left: 30px;
     font-family: Bitter, serif;
+    font-size: 15px;
   }
   
   .text-block-8 {
@@ -4142,7 +4164,7 @@ html {
   
   .opensea-logo {
     cursor: pointer;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/64131872f398e356601c7c3a_OpenSea-Full-Logo%20(light).webp");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/64131872f398e356601c7c3a_OpenSea-Full-Logo%20(light).webp");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4157,7 +4179,7 @@ html {
   .magiceden-logo {
     text-align: center;
     cursor: pointer;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/6627a5e9b2a1b97ca1bb0b76_ME_Full_Gradient.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/6627a5e9b2a1b97ca1bb0b76_ME_Full_Gradient.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4171,7 +4193,7 @@ html {
   
   .nftcalander-logo {
     cursor: pointer;
-    background-image: url("https://assets-global.website-files.com/640c5e627c91e08ec2c1c88a/65a2934c92cba3de1db2ada5_nft-calendar-transparent.png");
+    background-image: url("https://cdn.prod.website-files.com/640c5e627c91e08ec2c1c88a/65a2934c92cba3de1db2ada5_nft-calendar-transparent.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4324,6 +4346,23 @@ html {
     width: 258.43px;
     height: 276px;
     display: inline-block;
+  }
+  
+  .list-item-8, .list-item-9, .list-item-10, .list-item-11, .list-item-12, .list-item-13, .list-item-14 {
+    text-decoration: line-through;
+  }
+  
+  .list-3 {
+    font-size: 15px;
+  }
+  
+  .list-4 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .list-5, .list-item-15, .list-6, .list-item-16, .list-item-17, .list-item-18, .list-item-19 {
+    font-size: 15px;
   }
   
   @media screen and (max-width: 991px) {
@@ -6001,7 +6040,7 @@ html {
       justify-self: center;
     }
   
-    #w-node-_328d5bc9-7be3-3a56-66c0-b9b064ad5df4-5517f301, #w-node-cf998c2f-3cac-25d9-b044-f2762e9ee1d0-5517f301 {
+    #w-node-cf998c2f-3cac-25d9-b044-f2762e9ee1d0-5517f301 {
       grid-area: span 1 / span 1 / span 1 / span 1;
     }
   
