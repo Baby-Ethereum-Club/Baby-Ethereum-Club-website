@@ -307,6 +307,26 @@
             </div>
             <div class="universe-column-4"><a href="https://dapp.babyethereumclub.com/" target="_blank"
                     class="button w-button">Mint Now</a></div>
+            <div id="helioCheckoutContainer"></div>
+
+<script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    window.helioCheckout(
+      document.getElementById("helioCheckoutContainer"),
+      {
+        paylinkId: "65be6c736101ece90a42ccc3",
+        display: "button",
+        onSuccess: event => console.log(event),
+        onError: event => console.log(event),
+        onPending: event => console.log(event),
+        onCancel: () => console.log("Cancelled payment"),
+        onStartPayment: () => console.log("Starting payment"),
+      }
+    );
+  });
+</script>
         </div>
         <div class="separator"></div>
         <h2 id="about-us" class="why-bec">About us<br />‍</h2>
